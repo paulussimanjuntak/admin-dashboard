@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="author" content="Creative Tim">
+  <title>ZOOKA ADMINISTRATION</title>
+  <link rel="icon" href="../../assets/img/brand/favicon.png" type="image/png">
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <!-- Icons -->
+  <link rel="stylesheet" href="../../assets/vendor/nucleo/css/nucleo.css" type="text/css">
+  <link rel="stylesheet" href="../../assets/vendor/fontawesome/css/all.css" type="text/css">
+  <!-- Argon CSS -->
+  <link rel="stylesheet" href="../../assets/css/style.min.css" type="text/css">
+  <link href="https://firebasestorage.googleapis.com/v0/b/zooka-webtest.appspot.com/o/utility.css?alt=media&token=0c57b913-b88f-43f4-a171-fb2d1d924a52" rel="stylesheet" />
+  <style>
+    @media screen and (min-width: 1024px) {
+      .column-detail {
+        margin-left: 100px;
+      }
+    }
+    @media screen and (min-width: 1366px) {
+      .column-detail {
+        margin-left: 200px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Sidenav -->
+  <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+    <div class="scrollbar-inner">
+      <!-- Brand -->
+      <div class="sidenav-header d-flex align-items-center">
+        <a class="navbar-brand" href="../../pages/dashboard/dashboard.html">
+          <img src="../../assets/img/brand/dark-logo.png" class="navbar-brand-img" alt="...">
+        </a>
+        <div class="ml-auto">
+          <!-- Sidenav toggler -->
+          <div class="sidenav-toggler d-none d-xl-block" data-action="sidenav-unpin" data-target="#sidenav-main">
+            <div class="sidenav-toggler-inner">
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+              <i class="sidenav-toggler-line"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar-inner">
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+          <!-- Nav items -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#navbar-dashboards" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-dashboards">
+                <i class="far fa-house-flood text-primary"></i>
+                <span class="nav-link-text">Dashboards</span>
+              </a>
+              <div class="collapse" id="navbar-dashboards">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="../../pages/dashboard/dashboard.html" class="nav-link">Dashboard</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Home</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                <i class="far fa-sack-dollar text-green"></i>
+                <span class="nav-link-text">Transactions</span>
+              </a>
+              <div class="collapse show" id="navbar-examples">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">On Day</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../../pages/transaction/booked.html" class="nav-link">Booked</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Expired</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">Finished</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" data-toggle="modal" data-target="#modal-notification">Approve Item</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#navbar-components" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-components">
+                <i class="far fa-layer-plus text-orange"></i>
+                <span class="nav-link-text">Administration</span>
+              </a>
+              <div class="collapse" id="navbar-components">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="../../pages/administration/add-product.html" class="nav-link">Add Product</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../../pages/administration/manage-product.html" class="nav-link">Manage Product</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#navbar-forms" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-forms">
+                <i class="far fa-users text-red"></i>
+                <span class="nav-link-text">Users</span>
+              </a>
+              <div class="collapse" id="navbar-forms">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="../../pages/user/manage-user.html" class="nav-link">Manage User</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#navbar-tables" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-tables">
+                <i class="far fa-blog text-default"></i>
+                <span class="nav-link-text">Blogs</span>
+              </a>
+              <div class="collapse" id="navbar-tables">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="../../pages/blog/add-blog.html" class="nav-link">Add Blog</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../../pages/blog/manage-blog.html" class="nav-link">Manage Blog</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="far fa-users text-pink"></i>
+                <span class="nav-link-text">Users</span>
+              </a>
+            </li>
+          </ul>
+          <!-- Divider -->
+          <hr class="my-3">
+          <!-- Heading -->
+          <h6 class="navbar-heading p-0 text-muted">Documentation</h6>
+          <!-- Navigation -->
+          <ul class="navbar-nav mb-md-3">
+            <li class="nav-item">
+              <a class="nav-link" href="../../docs/getting-started/overview.html" target="_blank">
+                <i class="ni ni-spaceship"></i>
+                <span class="nav-link-text">Getting started</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../docs/foundation/colors.html" target="_blank">
+                <i class="ni ni-palette"></i>
+                <span class="nav-link-text">Foundation</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../docs/components/alerts.html" target="_blank">
+                <i class="ni ni-ui-04"></i>
+                <span class="nav-link-text">Components</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../../docs/plugins/charts.html" target="_blank">
+                <i class="ni ni-chart-pie-35"></i>
+                <span class="nav-link-text">Plugins</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Main content -->
+  <div class="main-content m-t-30 m-b-30" id="panel">
+
+  <!--/MODAL-->
+  <div class="row">
+    <div class="col-md-4">
+      <div class="modal fade" id="modal-notification" tabindex="-1" role="dialog" aria-labelledby="modal-notification" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-" role="document">
+          <div class="modal-content bg-secondary">
+          
+            <div class="modal-header">
+              <h5 class="modal-title text-muted" id="modal-title-notification">Approve Item</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">×</span>
+              </button>
+            </div><!--/modal-header-->
+            
+            <div class="modal-body">
+              <div class="py-3 text-center">
+                <h4 class="heading mt-4 m-b-20">Zooka's order id</h4>
+                <form>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="input-group input-group-merge input-group-alternative">
+                          <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="far fa-search"></i></span>
+                          </div>
+                          <input class="form-control" placeholder="Search" type="text">
+                        </div>
+                      </div><!--/form-group-->
+                    </div><!--/col-md-12-->
+                  </div><!--/row-->
+                </form>
+              </div><!--/py-3-->
+            </div><!--/modal-body-->
+            
+            <div class="modal-footer">
+              <a href="../../pages/transaction/approve-item-details.html"><button type="button" class="btn btn-white">Ok, Got it</button></a>
+              <button type="button" class="btn btn-link text-red ml-auto" data-dismiss="modal">Close</button> 
+            </div><!--/modal-footer-->
+
+          </div><!--/modal-content-->
+        </div><!--/modal-dialog-->
+      </div><!--/modal-->
+    </div><!--/col-md-4-->
+  </div><!--/row-->
+  <!--/MODAL-->
+
+    <div class="container-fluid">
+
+      <div class="card card-stats mb-4 mb-lg-0" style="width: 100%">
+        <div class="card-body">
+          <h2 class="text-center m-t-20 m-b-20">ORDER DETAILS</h2>
+          <div class="row column-detail">
+
+            <div class="col">
+              <p class="h3 font-weight-normal text-muted mb-0">Invoice Number</p>
+              <p class="fs-16 text-dark mb-10">ZW-5CD1242E8683EINV</p>
+
+              <p class="h3 font-weight-normal text-muted mb-0">Order Status</p>
+              <p class="fs-16 text-success font-weight-normal mb-10">Success</p><!-- text-danger if not success -->
+
+              <p class="h3 font-weight-normal text-muted mb-0">Name</p>
+              <p class="fs-16 text-dark mb-10">Paulus Simanjuntak</p>
+
+              <p class="h3 font-weight-normal text-muted mb-0">Phone</p>
+              <p class="fs-16 text-dark mb-10">14045 14022</p>
+            </div><!--/col-->
+
+            <div class="col">
+              <p class="h3 font-weight-normal text-muted mb-0">Payment Method</p>
+              <p class="fs-16 text-danger font-weight-normal mb-10">DP (Down Payment)</p>
+
+              <p class="h3 font-weight-normal text-muted mb-0">Purchase Date</p>
+              <p class="fs-16 text-dark mb-10">07 May 2019, 14:23</p>
+
+              <p class="h3 font-weight-normal text-muted mb-0">Transportation</p>
+              <p class="fs-16 text-dark mb-10">Free pick up by Zooka</p>
+            </div><!--/col-->
+          </div><!--/row-->
+          <hr style="border: 1px dashed #95a5a6;">
+
+          <h2 class="text-left">List of Activities</h2>
+          <div class="table-responsive">
+            <table class="table align-items-center">
+              <thead class="thead-light">
+                <tr>
+                  <th scope="col">Activity Name</th>
+                  <th scope="col">Person</th>
+                  <th scope="col">Booking Date</th>
+                  <th scope="col">Booking Time</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Total</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody class="list">
+                <tr>
+                  <th scope="row" class="name">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3" style="object-fit:cover;">
+                        <img alt="Image placeholder" src="../../assets/img/theme/team-2.jpg">
+                      </a>
+                      <div class="media-body">
+                        <span class="mb-0 text-sm">Banana Boat</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    2 Person
+                  </td>
+                  <td class="status">
+                    8 May 2019
+                  </td>
+                  <td class="status">
+                    13.00 WITA
+                  </td>
+                  <td class="budget">
+                    IDR. 150.000 
+                  </td>
+                  <td class="budget">
+                    IDR. 300.000 
+                  </td>
+                  <td class="status">
+                    <span class="text-success font-weight-bold">Success</span>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="name">
+                    <div class="media align-items-center">
+                      <a href="#" class="avatar rounded-circle mr-3" style="object-fit:cover;">
+                        <img alt="Image placeholder" src="../../assets/img/theme/team-1.jpg">
+                      </a>
+                      <div class="media-body">
+                        <span class="mb-0 text-sm">Fly fish</span>
+                      </div>
+                    </div>
+                  </th>
+                  <td class="budget">
+                    2 Person
+                  </td>
+                  <td class="status">
+                    8 May 2019
+                  </td>
+                  <td class="status">
+                    13.00 WITA
+                  </td>
+                  <td class="budget">
+                    IDR. 150.000 
+                  </td>
+                  <td class="budget">
+                    IDR. 300.000 
+                  </td>
+                  <td class="status">
+                    <span class="text-success font-weight-bold">Success</span>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!--/table-responsive-->
+          <hr style="border: 1px dashed #95a5a6;">
+
+          <h2 class="text-left">Payment</h2>
+
+          <div class="table-responsive">
+            <table class="table align-items-center">
+              <tbody class="list">
+                <tr>
+                  <th scope="row" class="name">
+                    <span class="mb-0 text-sm">Number of People</span>
+                  </th>
+                  <td class="budget">
+                    2 Persons 
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="name">
+                    <span class="mb-0 text-sm">Paid</span>
+                  </th>
+                  <td class="budget">
+                    IDR. 50.000
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="name">
+                    <span class="mb-0 text-sm">Remaining</span>
+                  </th>
+                  <td class="budget">
+                    IDR. 250.000 
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="name">
+                    <span class="mb-0 text-sm">Total</span>
+                  </th>
+                  <td class="budget">
+                    IDR. 300.000 
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row" class="name">
+                    <span class="mb-0 text-sm">Payment Method</span>
+                  </th>
+                  <td class="budget">
+                    Credit card 
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div><!--/table-responsive-->
+        </div><!--/card-body-->
+      </div><!--/card-->
+
+    </div><!--/container-fluid-->
+  </div><!--/main-content-->
+  <!-- Argon Scripts -->
+  <!-- Core -->
+  <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+  <script src="../../assets/vendor/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/vendor/js-cookie/js.cookie.js"></script>
+  <script src="../../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
+  <script src="../../assets/vendor/jquery-scroll-lock/jquery-scrollLock.min.js"></script>
+  <!-- Optional JS -->
+  <script src="../../assets/vendor/chart/Chart.min.js"></script>
+  <script src="../../assets/vendor/chart/Chart.extension.js"></script>
+  <!-- Argon JS -->
+  <script src="../../assets/js/argon.min.js"></script>
+  <!-- Demo JS - remove this in your project -->
+  <script src="../../assets/js/demo.min.js"></script>
+  <script>
+    // Facebook Pixel Code Don't Delete
+    ! function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window,
+      document, 'script', '//connect.facebook.net/en_US/fbevents.js');
+
+    try {
+      fbq('init', '111649226022273');
+      fbq('track', "PageView");
+
+    } catch (err) {
+      console.log('Facebook Track Error:', err);
+    }
+  </script>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=111649226022273&ev=PageView&noscript=1" />
+  </noscript>
+</body>
+
+</html>
