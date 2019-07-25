@@ -401,6 +401,11 @@
                     <label for="formGroupExampleInput">Name Product</label>
                     <input type="text" class="form-control" id="formGroupExampleInput">
                   </div><!--/form-group-->
+                  
+                  <label>Description Product</label>
+                  <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                  </div><!--/form-group-->
 
                   <label>Duration</label>
                   <div class="form-group">
@@ -448,7 +453,15 @@
 
               <div class="card-body">
                 <form>
-                  <label>Price</label>
+                  <label class="text-red">Old Price <small>(optional)</small></label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text" style="color: #fff; background-color: #adb5bd;">IDR</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+                  </div><!--/input-group-->
+
+                  <label>New Price</label>
                   <div class="input-group mb-3">
                     <div class="input-group-prepend">
                       <span class="input-group-text" style="color: #fff; background-color: #adb5bd;">IDR</span>
